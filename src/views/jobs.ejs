@@ -1,0 +1,81 @@
+
+<link rel="stylesheet" href="/css/jobs.css">
+<div id="jobs-view">
+
+    
+
+    <div id="jobs-nav">
+            <div class="jobs-error-message">
+                <%if(errorMessage){ %>
+                    <span class="alert">
+                        <%= errorMessage %>
+                    </span>
+                    <hr>
+                <%}%>
+            </div>
+            <div id="jobs-button">
+                <% if(locals.userName){ %>
+                    <button>
+                        <a href="/jobs/recruiter/<%=locals.userEmail%>/1">Your Posted Jobs</a>
+                    </button>
+                <% } %>
+                <button>
+                    <a href="/jobs/jobpage/1">All Jobs</a>
+                </button>
+            </div>
+    </div>
+
+    <div id="jobs">
+        <% jobs.forEach((j)=> { %>
+    
+            <div class="jobs-card" style = <%= locals.userEmail==j.jobPostedBy ? 'background-color:#e7ffe8':'background-color:antiquewhite' %> >
+               <div class="hiring">
+                   Actively Hiring <i class="fa-solid fa-chart-line"></i>
+               </div>
+               <div class="company-name">
+                   <%= j.companyName %>
+               </div>
+               <div class="category-and-designation">
+                   <span><%= j.category %></span> : <%= j.designation; %>
+               </div>
+               <div class="location">
+                   Location : <%= j.location %>
+               </div>
+               <div class="salary">
+                   Salary : Rs.<%= j.salary[0] %>-Rs.<%= j.salary[1] %>
+               </div>
+               <div class="skills">
+                   <% j.skillsRequired.forEach((s)=>{ %>
+                       <div class="skill">
+                           <%= s %>
+                       </div>
+                   <% }); %>
+               </div>
+               <button class="view-details">
+                   <a href="/jobs/<%=j._id%>">View Details</a>
+               </button>
+           </div> 
+       
+       <% }); %>
+    </div>    
+
+    <div class="jobs-pages">
+        <ul>
+            
+            <% for(var i=0;i< jobsCount/8 ;i++){ %>
+                <li>
+                    <%if(jobsOf == "Recruiter"){%>
+                        <a href="/jobs/recruiter/<%=userEmail%>/<%=i+1%>"><%=i+1%></a>
+                    <%}else if(jobsOf == "All"){%>   
+                        <a href="/jobs/jobpage/<%=i+1%>"><%=i+1%></a>
+                    <%}else if(jobsOf == "Searched"){%>   
+                        <a href="/search/<%=i+1%>"><%=i+1%></a>
+                    <%}%>   
+                </li>
+            <% } %>
+
+        </ul>
+    </div>
+
+</div>
+

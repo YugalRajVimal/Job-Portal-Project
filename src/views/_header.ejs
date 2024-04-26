@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/css/_header.css">
+<header>
+    <nav>
+        <ul id="nav-list">
+            <a href="/" id="site-name">Easily</a>
+            <li class="nav-buttons">
+                <a href="/">Home</a>
+            </li>
+            <li class="nav-buttons">
+                <a href="/jobs/jobpage/1">Jobs</a>
+            </li>
+            <li class="nav-buttons">
+                <a onclick="toggleRecruiterList()" id="toggleBtnRecruList"><%= locals.userName?locals.userName:"Recruiter" %> <i class="fa-solid fa-sort-down"></i> </a>
+
+
+                <div id="recruiter-list">
+                    <ul>
+                        <% if(locals.userName){ %>
+                            <li> <a href="/logout">LogOut</a> </li>
+                        <%} else {%>
+                            <li> <a href="/signin">SignIn</a> </li>
+                            <li> <a href="/signup">SignUp</a> </li>
+                        <%}%>
+
+                        <li><a href="/jobs/postjob">Post New Job</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    
+        <div id="search-bar">
+            <form action="/search/1" method="POST">
+                <input type="text" name="searchText" placeholder="Search">
+                <button type="submit">Search Jobs</button>
+            </form>
+            
+        </div>
+</nav>
+</header>
+
+<script>
+    function toggleRecruiterList(){
+        var recruiterList = document.getElementById('recruiter-list');
+        if(recruiterList.style.display=='none'){
+            recruiterList.style.display='block';
+        }
+        else{
+            recruiterList.style.display='none';
+        }
+    }
+</script>

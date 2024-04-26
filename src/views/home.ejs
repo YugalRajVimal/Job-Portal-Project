@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/css/home.css">
+<main>
+    <div id="main-container">
+        <div id="about-site">
+            <h1>A Comprehensive Platform for Reliable</h1>
+            <h2>job opportunities and internships.</h2>
+            <h5>Get Discovered. Get Hired.</h5>
+            <div id="home-buttons">
+                <button>
+                    <a href="/jobs/jobpage/1">I'm A Job Seeker</a>
+                </button>
+                <% if(!locals.userName){ %>
+                    <button>
+                        <a href="#signUp">I'm A Recruiter</a>
+                    </button>
+                <% } %>
+            </div>
+        </div>
+        <div id="home-image">
+            <img src="" alt="Home-Image">
+        </div>
+    </div>
+</main>
+
+<div id="signUp" class="signInUpDiv">
+    <div>
+        <div class="signInUpNav">
+            <h1>SignUp</h1> <a href="/"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+    
+        <form action="/signup" method="POST" >
+            <input required type="text" name="name" placeholder="Enter your Name">
+            <input required type="text" name="email" placeholder="Enter your Email">
+            <input required type="password" name="password" id="" placeholder="Enter new Password">
+            <button type="submit">SignUp</button>
+        </form>
+        <div class="signInUpBtn">
+            Already Registered? 
+            <button>
+                <a href="#signIn">Sign In</a>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="signIn" class="signInUpDiv">
+    <div>
+        <div class="signInUpNav">
+            <h1>SignIn</h1> <a href="/"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+
+        <form action="signin" method="POST">
+            <input type="email" name="email" placeholder="Enter your Email">
+            <input type="password" name="password" id="" placeholder="Enter new Password">
+            <button type="submit">SignIn</button>
+        </form>
+        <div class="signInUpBtn">
+            Not Registered? 
+            <button>
+                <a href="#signUp">Sign Up</a>
+            </button>
+        </div>
+    </div>
+</div>

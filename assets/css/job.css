@@ -1,0 +1,191 @@
+
+.job{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.job button{
+    border: 1px solid brown;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 4px 15px;
+    background-color: rgb(254, 104, 80);
+}
+
+.job button:hover{
+    background-color: rgb(255, 57, 26);
+}
+
+.job button a{
+    color: black;
+    text-decoration: none;
+}
+
+.job .job-headline{
+    width: 60%;
+    border-radius:5px;
+    margin: 0 auto;
+    font-size: 45px;
+    background-color: rgb(255, 215, 163);
+    color: brown;
+}
+
+.job .job-content{
+    text-align: left;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.job .job-content i {
+    width: 25px;
+}
+
+.job .job-content button{
+    margin: 0;
+    padding: 4px 15px;
+}
+
+
+i.fa-solid{
+    text-align: center;
+}
+
+.job div{
+    margin: 5px;
+    padding: 4px 15px;
+}
+
+
+.job .hiring{
+    border-radius: 5px;
+    background-color: antiquewhite;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.job .company-name{
+    display: inline-block;
+    font-family: monospace;
+    padding: 0 0 0 15px;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.job .category{
+    display: inline-block;
+    font-family: monospace;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.job .designation{
+    font-family: monospace;
+    font-size: 1.2rem;
+    padding: 0 0 0 15px;
+    margin: 0 0 20px 15px;
+
+}
+
+.job .skills-required{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.job .skills-required .skills{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.job .skills-required .skills .skill{
+    width: auto;
+    margin: 5px;
+    height: 1rem;
+    padding: 3px 8px;
+    color:  rgb(147, 71, 218);
+    border: 1.5px solid rgb(147, 71, 218);
+    border-radius: 3px;
+}
+
+#apply-job{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(130, 130, 130, 0.501);
+    position:fixed;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#apply-job:target{
+    display: flex;
+}
+
+.apply-job-close:target{
+    display: none;
+}
+
+#apply-form form{
+    background-color: antiquewhite;
+    height: 50vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+    border: 1px solid brown;
+}
+
+#apply-form form #close-button{
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+#apply-form form #close-button a{
+    font-size: 1.5rem;
+    color: black;
+}
+
+#apply-form form #close-button:hover{
+    background-color: rgb(198, 70, 70);
+}
+
+#apply-form form div{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#apply-form label,#apply-form input,#apply-form button{
+    font-size: 1.2rem;
+}
+
+#apply-form label{
+    width: 70px;
+}
+
+#apply-form input{
+    width:300px;
+    border-radius: 5px;
+    border: 1px solid brown;
+    padding: 4px 10px;
+    margin-right: 20px;
+}
+
+.alert{
+    background-color: red;
+    color: white;
+    font-size: 1.2rem;
+    width: 300px;
+    margin: auto;
+    padding: 0 20px;
+    border-radius:10px ;
+}

@@ -1,0 +1,100 @@
+/* Header  */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+nav #site-name{
+    font-family: monospace;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin:0 10px;
+    color: rgb(250, 151, 20);
+}
+
+nav a{
+    text-decoration: none;
+    color: brown;
+}
+
+nav #nav-list{
+    margin: 0;
+    padding-inline-start: 0px;
+}
+
+nav #nav-list li{
+    display: inline-block;
+    margin: 5px;
+    padding: 4px 8px;
+    position: relative;
+    color: rgb(255, 164, 44);
+}
+
+nav #nav-list li:hover{
+    background-color: rgb(255, 216, 165);
+}
+
+.nav-buttons{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+#toggleBtnRecruList:hover{
+    cursor: pointer;
+}
+
+#recruiter-list{
+    display: none;
+    position: absolute;
+}
+
+#recruiter-list ul{
+    text-align: left;
+    background-color:antiquewhite;
+    box-shadow: -2px -2px rgba(2, 1, 0, 0.364);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#recruiter-list ul li{
+    display: block;
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 8px;
+    border-radius: 3px;
+}
+
+#search-bar input{
+    border: 1px solid brown;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+#search-bar button{
+    border: none;
+    padding: 4px 8px;
+    color: brown;
+    font-weight: 600;
+    border: 1px solid brown;
+    border-radius: 5px;
+    background-color: rgb(255, 192, 110);
+}
+
+#search-bar button:hover{
+    cursor: pointer;
+}

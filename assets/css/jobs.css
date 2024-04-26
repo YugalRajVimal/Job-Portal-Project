@@ -1,0 +1,171 @@
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 94vh;
+    width: 100vw;
+}
+
+/*
+#jobs-error-message
+#jobs-button
+#jobs
+#jobs-pages 
+*/
+
+
+
+#jobs-nav{
+    height: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.jobs-error-message{
+    background-color: rgba(255, 52, 52, 0.736);
+    width: 100%;
+}
+
+#jobs-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#jobs-button button{
+    border: 1px solid brown;
+    border-radius: 4px;
+    background-color: antiquewhite;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0 10px;
+    padding: 4px 15px;
+}
+
+#jobs-button button:hover{
+    background-color: rgb(249, 185, 101);
+}
+
+#jobs-button button a{
+    color: brown;
+    text-decoration: none;
+}
+
+#jobs-view{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+#jobs{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.jobs-card{
+    height: 310px;
+    width: 250px;
+    margin:5px 30px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jobs-card div{
+    width: 90%;
+    margin: 5px;
+}
+
+.jobs-card .hiring{
+    border: 1px solid black;
+    border-radius: 4px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.jobs-card .company-name{
+    font-size: 22px;
+    color: brown;
+    font-family: monospace;
+    font-weight:bold;
+}
+
+.jobs-card .category-and-designation{
+    text-align:left;
+}
+
+.jobs-card .category-and-designation span{
+    color: rgb(129, 0, 129);
+}
+
+.jobs-card .location{
+    text-align:left;
+}
+
+.jobs-card .salary{
+    text-align:left;
+}
+
+.jobs-card .skills{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100px ;
+
+}
+
+.jobs-card .skills .skill{
+    width: auto;
+    height: 1rem;
+    padding: 3px 8px;
+    color:  rgb(147, 71, 218);
+    border: 1.5px solid rgb(147, 71, 218);
+    border-radius: 3px;
+}
+
+.jobs-card .view-details{
+    border: none;
+    border-radius:5px ;
+    background-color:rgb(255, 109, 86);
+    padding: 4px 10px;
+} 
+
+
+.jobs-card .view-details:hover{
+    background-color:rgb(254, 38, 5);
+} 
+
+.jobs-card .view-details a{
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+} 
+
+.jobs-pages{
+    margin-bottom: 20px;
+}
+
+.jobs-pages ul{
+    display: flex;
+    justify-content: center;
+}
+
+.jobs-pages li{
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 50%;
+}

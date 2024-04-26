@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/css/applicants.css">
+<div class="applicants-details">
+<p>View and Download functionality is disabled due to limited storage on Server.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th colspan="2">Resume</th>
+            </tr>
+        </thead>
+        <tbody>
+                <% applicants?.forEach((a,index)=>{ %>
+                <tr>
+                    <td>
+                        <%= index+1 %>
+                    </td>
+                    <td>
+                        <%= a.name %>
+                    </td>
+                    <td>
+                        <%= a.email %>
+                    </td>
+                    <td>
+                        <%= a.contact %>
+                    </td>
+                    <td>
+                        <a href="/applicants/pdf/<%=a.resume%>" target="_blank">View</a>
+                    </td>
+                    <td>
+                        <a href="/applicants/pdf/<%=a.resume%>" download>Download</a>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+</div>
+<script src="../../public//js/openPdf.js"></script>

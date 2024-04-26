@@ -1,0 +1,67 @@
+
+<link rel="stylesheet" href="/css/postjob.css">
+<form id="post-job-form" action="/jobs/update/<%=job._id%>" method="POST">
+    <%if(errorMessage){ %>
+        <span class="alert">
+            <%= errorMessage %>
+        </span>
+    <%}%>
+    <h1>Update Job</h1>
+<div class="row">
+    <select name="category">
+        <option selected disabled>Choose new category:</option>
+        <option value="Tech">Tech</option>
+        <option value="Non Tech">Non Tech</option>
+    </select>
+    
+    <select name="designation" >
+        <option selected disabled>Choose new Job Designation from <%=job.designation%></option>
+        <option value="HR">HR</option>
+        <option value="SDE">SDE</option>
+        <option value="DevOps">DevOps</option>
+        <option value="MERN Developer">MERN Developer</option>
+        <option value="MEAN Developer">MEAN Developer</option>
+        <option value="JAVA Developer">JAVA Developer</option>
+        <option value="Front-End Developer">Front-End Developer</option>
+        <option value="Back-End Developer">Back-End Developer</option>
+        <option value="Full-Stack Developer">Full-Stack Developer</option>
+    </select>
+</div>
+<div class="row">
+    <input type="text" name="location" value=<%=job.location%>>
+    <input name="companyName" type="text" value=<%=job.companyName%>>
+</div>
+<div class="row">
+    <div class="salary">
+        Salary
+        <input type="number" name="salaryFrom" value=<%=job.salary[0]%>>
+        -
+        <input type="number" name="salaryTo" value=<%=job.salary[1]%>>
+    </div>
+    <input name="openings" type="number" value=<%=job.openings%>>
+</div>
+<div class="row">
+    <select required name="skillsRequired" multiple>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JS">JS</option>
+        <option value="C++">C++</option>
+        <option value="Problem Solving">Problem Solving</option>
+        <option value="REST">REST</option>
+        <option value="AWS">AWS</option>
+        <option value="Express">Express</option>
+        <option value="MongoDB">MongoDB</option>
+    </select>
+    <label for="applyBy">Apply By</label>
+    <input type="date" name="applyBy">
+</div>
+<div class="row button"> 
+    <button type="submit"> 
+        Submit
+    </button>
+</div>
+
+
+   
+
+</form>

@@ -1,0 +1,190 @@
+
+/* Main  */
+
+#main-container{
+    height: 95vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#about-site{
+    font-family: monospace;
+    font-size: 2rem;
+    margin: 40px;
+}
+#about-site h1,#about-site h2,#about-site h5{
+    letter-spacing: -2px;
+    font-weight: 200;
+    color: brown;
+
+}
+
+#about-site h2{
+    text-transform: uppercase;
+}
+
+#home-image{
+    margin:40px;
+    height:55vh ;
+    width:45vw;
+    background-color:antiquewhite;
+}
+
+/* Sign Up */
+
+#signUp{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(130, 130, 130, 0.501);
+    position:fixed;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#signUp:target{
+    display: flex;
+}
+
+.signInUpDiv>div{
+    height: 350px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 10px;
+}
+
+.signInUpDiv a{
+    text-decoration: none;
+}
+
+.signInUpDiv .signInUpNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.signInUpDiv .signInUpNav i{
+    font-size: 20px;
+    color: black;
+}
+
+.signInUpDiv .signInUpNav i{
+    font-size: 20px;
+    color: black;
+}
+
+.signInUpDiv .signInUpNav a{
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-size: 20px;
+    color: black;
+}
+
+.signInUpDiv .signInUpNav a:hover{
+    background-color: rgb(198, 70, 70);
+
+}
+
+.signInUpDiv form{
+    display: flex;
+    flex-direction: column;
+}
+
+.signInUpDiv h1{
+    color:rgb(255, 164, 44);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.417);
+}
+
+.signInUpDiv form input{
+
+    width: 250px;
+    font-size: 15px;
+    padding: 8px 20px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    margin: 7px 0px;
+}
+
+.signInUpDiv form button{
+    font-size: 18px;
+    padding: 8px 20px;
+    background-color: rgb(252, 193, 116);
+    border-radius: 5px;
+    margin: 7px 0px;
+}
+
+.signInUpDiv button:hover{
+    background-color: rgb(227, 98, 98);
+}
+
+.signInUpDiv .signInUpBtn  button{
+    font-size: 14px;
+    padding: 4px 10px;
+    background-color: rgb(252, 193, 116);
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+.signInUpDiv .signInUpBtn button:hover{
+    background-color: rgb(227, 98, 98);
+}
+
+#signIn{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(130, 130, 130, 0.501);
+    position:fixed;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#signIn:target{
+    display: flex;
+}
+
+#signIn form{
+    display: flex;
+    flex-direction: column;
+}
+
+#home-buttons button{
+    border: none;
+    padding: 5px 8px;
+    border:1px solid brown;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+
+#home-buttons button:hover{
+    border:1px solid brown;
+    background-color: rgb(255, 194, 115);
+}
+
+#home-buttons button a{
+    text-decoration: none;
+    font-size: 15px;
+    color: brown;
+}
+

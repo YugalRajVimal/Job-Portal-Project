@@ -1,0 +1,36 @@
+.applicants-details{
+    padding: 40px;
+}
+
+.applicants-details p{
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: rgba(249, 43, 43, 0.71);
+    border:1px solid brown ;
+}
+
+.applicants-details table,th,td{
+    margin: auto;
+    background-color: antiquewhite;
+    border: 1px solid brown;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.applicants-details th{
+    padding: 10px 30px;
+    background-color: rgb(255, 201, 131);
+}
+
+.applicants-details td{
+    padding: 6px 30px;
+}
+
+.applicants-details td a{
+    text-decoration: none;
+    color: black;
+}
+
+.applicants-details td a:hover{
+    color: rgb(231, 33, 33);
+}

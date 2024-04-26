@@ -1,0 +1,111 @@
+<link rel="stylesheet" href="/css/job.css">
+<div class="job">
+    
+    <div class="job-poster">
+        <img src="https://files.codingninjas.com/web-banner-28759.png" alt="Job Poster">
+    </div>
+    <%if(locals.userEmail == job.jobPostedBy){%>
+        <button>
+            <a href="/jobs/update/<%=job._id%>">Update Job</a>
+        </button>
+        <button>
+            <a href="/jobs/delete/<%=job._id%>">Delete Job</a>
+        </button>
+    <%}%>
+    <div class="job-headline">
+        <%= job.designation %> opportunity in <%= job.location %> at <%= job.companyName %>
+    </div>
+    <div class="job-content">
+        <div class="hiring">
+            Actively Hiring <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <div class="company-name">
+            <%= job.companyName %>
+        </div>
+        <div class="category">
+            (<%= job.category %>)
+        </div>
+        <div class="designation">
+            <%= job.designation %>
+        </div>
+        <div class="location">
+            <i class="fa-solid fa-location-dot"></i> <%= job.location %>
+        </div>
+        <div class="salary">
+            <i class="fa-solid fa-indian-rupee-sign"></i> <%= job.salary[0] %> - <%= job.salary[1] %>
+        </div>
+        <div class="apply-by">
+            <i class="fa-solid fa-hourglass"></i> Apply By <%= job.applyBy %>
+        </div>
+        <div class="openings">
+            <i class="fa-solid fa-signal"></i> Number of Openings <%= job.openings %>
+        </div>
+        <div class="job-content-button">
+            <%if(locals.userName && locals.userEmail == job.jobPostedBy){%>
+                <i class="fa-solid fa-users"></i> 
+                <button class="applicants">
+                    <a href="/applicants/<%= job._id %>"> Applicants <%= job.applicants?.length %> </a>
+                </button>
+            <%}%>
+        </div>
+        <div class="skills-required">
+            <p><i class="fa-solid fa-bars"></i> Skills Required</p>
+            <div class="skills">
+                <% job.skillsRequired.forEach((s)=>{ %>
+                    <div class="skill">
+                        <%= s %>
+                    </div>
+                <% }); %>
+            </div>
+            
+        </div>
+        <%if(errorMessage){ %>
+            <span class="alert">
+                <%= errorMessage %>
+            </span>
+        <%}%>
+        <br>
+        <div class="job-content-button">
+            <i class="fa-solid fa-plus"></i>
+            <button>
+                <a href="#apply-job">Apply Now</a>
+            </button>
+        </div>
+        <div class="posted-on">
+            Posted On - <%= job.jobPostedOn %>
+        </div>
+    </div>
+   
+
+    <div id="apply-job">
+        <div id="apply-form">
+            
+            <form action="/applicants/apply/<%=job._id%>" method="POST" enctype="multipart/form-data">
+                <div id="close-button">
+                    <a href="/jobs/<%=job._id%>"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+                <h1>Apply in less than a minute</h1>
+                <div>
+                    <label for="name">Name</label>
+                    <input required name="name" type="text" placeholder="Enter your name"> 
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input required name="email" type="email" placeholder="Enter your email">
+                </div>
+                <div>
+                    <label for="contact">Contact</label>
+                    <input required name="contact" type="number" placeholder="10 Digit Contact No.">               
+                </div>
+                <div>
+                    <label for="resumeFile">Resume</label>
+                    <input required name="resumeFile" type="file">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+

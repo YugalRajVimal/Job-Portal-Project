@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/signInUp.css">
+<div class="sign-in-up">
+    <h1>SignIn</h1>
+    <%if(errorMessage){ %>
+        <div class="alert">
+            <%= errorMessage %>
+        </div>
+    <%}%>
+    <form action="/signin" method="POST">
+        <input type="email" name="email" placeholder="Enter your Email">
+
+        <input type="password" name="password" id="" placeholder="Enter new password">
+
+        <button type="submit">SignIn</button>
+    </form>
+</div>
+
+
