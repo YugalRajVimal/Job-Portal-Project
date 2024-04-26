@@ -1,7 +1,6 @@
 import express from 'express';
 import HomeController from '../controller/home.controller.js';
-import { auth } from '../middlewares/auth.middleware.js';
-import { setLastVisit } from '../middlewares/lastvisit.middleware.js';
+// import { setLastVisit } from '../middlewares/lastvisit.middleware.js';
 import { validateSignInRequest, validateUserRequest } from '../middlewares/validation.middleware.js';
 
 const homeRouter = express.Router();
@@ -14,7 +13,7 @@ homeRouter.get('/',(req,res)=>{
 })
 
 //SignIn
-homeRouter.post('/signin',validateSignInRequest,setLastVisit,(req,res)=>{
+homeRouter.post('/signin',validateSignInRequest,(req,res)=>{
     homeController.postSignIn(req,res);
 })
 
