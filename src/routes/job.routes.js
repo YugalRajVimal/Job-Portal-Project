@@ -11,11 +11,6 @@ jobsRouter.get('/jobpage/:page',(req,res)=>{
     jobController.getAllJobs(req,res);
 });
 
-//Retrieving specific job
-jobsRouter.get('/:id',(req,res)=>{
-    jobController.getSpecificJob(req,res);
-});
-
 //Retrieving jobs of specific recruiter according to page no.
 jobsRouter.get('/recruiter/:email/:page',(req,res)=>{
     jobController.getRecruiterJobs(req,res);
@@ -25,6 +20,11 @@ jobsRouter.get('/recruiter/:email/:page',(req,res)=>{
 jobsRouter.get('/postjob',auth,(req,res)=>{
     jobController.getPostJob(req,res);
 })
+
+//Retrieving specific job
+jobsRouter.get('/:id',(req,res)=>{
+    jobController.getSpecificJob(req,res);
+});
 
 //Creating new job
 jobsRouter.post('/',auth,validateJobRequest,(req,res)=>{
