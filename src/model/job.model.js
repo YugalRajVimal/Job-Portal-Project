@@ -71,7 +71,7 @@ export default class JobModel{
 
     //Create Job
     static createJob(category,designation,location,companyName,salaryFrom,salaryTo,applyBy,skillsRequired,openings,jobPostedOn,jobPostedBy){
-        const newJob = new JobModel(jobs.length+1,category,designation,location,companyName,salaryFrom,salaryTo,applyBy,skillsRequired,openings,jobPostedOn,jobPostedBy);
+        const newJob = new JobModel(jobs.length+1,category,designation,location,companyName,salaryFrom,salaryTo,applyBy,skillsRequired,openings,jobPostedOn,jobPostedBy,[]);
         jobs.push(newJob);
         return newJob;
     }
