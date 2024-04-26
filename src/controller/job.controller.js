@@ -87,7 +87,8 @@ export default class JobController{
             job:JobModel.getSpecificJob(id),
             userName:req.session.userName,
             userEmail:req.session.userEmail,
-            lastVisit:new Date(req.session.lastVisit).toLocaleString()
+            lastVisit:new Date(req.session.lastVisit).toLocaleString(),
+            errorMessage:null
         })
     }
 
